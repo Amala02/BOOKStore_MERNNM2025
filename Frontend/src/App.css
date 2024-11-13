@@ -1,0 +1,73 @@
+/* Root container with max-width, centered and adjusted padding */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem;  /* Increased padding for better spacing */
+  text-align: center;
+  background-color: #f4f7fa; /* Subtle background color */
+  border-radius: 10px;  /* Rounded corners */
+}
+
+/* Logo styling with transition and hover effect */
+.logo {
+  height: 7em; /* Slightly larger logo */
+  padding: 1.2em; /* Reduced padding for a tighter look */
+  transition: transform 300ms, filter 300ms; /* Added transform transition */
+  will-change: transform, filter;
+}
+
+/* Hover effect with a modern drop shadow */
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em rgba(100, 107, 255, 0.6)); /* Softer shadow */
+  transform: scale(1.05);  /* Slight zoom effect */
+}
+
+/* React-specific logo hover with a unique color */
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em rgba(97, 218, 251, 0.7)); /* Slightly lighter shadow */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Keyframes for rotating the logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Conditionally apply animation based on reduced-motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2.5rem;  /* Slightly larger padding */
+  background-color: #ffffff; /* Light background for cards */
+  border-radius: 12px;  /* Rounded corners for the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 300ms ease, box-shadow 300ms ease; /* Transition for card hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px);  /* Slight lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+/* Text color for the 'read-the-docs' link */
+.read-the-docs {
+  color: #999;  /* Lighter gray color */
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.read-the-docs:hover {
+  color: #555; /* Darker color on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
